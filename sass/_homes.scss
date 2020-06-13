@@ -4,6 +4,9 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 	grid-gap: 7rem;
+	@media only screen and (max-width: $bp-small) {
+		margin: 6rem 0;
+	}
 }
 .home {
 	background-color: $color-grey-light-1;

@@ -8,12 +8,21 @@
 		grid-template-rows: repeat(6, 1fr);
 		grid-template-columns: repeat(6, 1fr);
 		align-items: center;
+		@media only screen and (max-width: $bp-medium) {
+			grid-column: full-start / full-end;
+			padding: 6rem;
+		}
 	}
 	&__img--1 {
 		width: 100%;
 		grid-row: 2 / span 4;
 		grid-column: 2 / span 4;
 		box-shadow: 0 2rem 5rem rgba(0, 0, 0, .1);
+		@media only screen and (max-width: $bp-medium) {
+			grid-column: 1 / 5;
+			grid-row: 1 / -1;
+			height: auto;
+		}
 	}
 	&__img--2 {
 		z-index: 2;
@@ -21,6 +30,10 @@
 		grid-row: 4 / 6;
 		grid-column: 4 / 7;
 		box-shadow: 0 2rem 5rem rgba(0, 0, 0, .2);
+		@media only screen and (max-width: $bp-medium) {
+			grid-row: 1 / -1;
+			width: 100%;
+		}
 	}
 	&__content {
 		background-color: $color-grey-light-1;
@@ -30,6 +43,14 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
+		@media only screen and (max-width: $bp-medium) {
+			grid-column: full-start / full-end;
+			grid-row: 5 / 6;
+		}
+		@media only screen and (max-width: $bp-medium) {
+			padding: 3rem 8vw 4rem 8vw;
+		}
+		
 	}
 	&__text {
 		font-size: 1.5rem;
